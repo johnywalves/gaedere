@@ -1,21 +1,19 @@
-
-title: Karna
-desctiption: Karna is a responsive jekyll theme which includes pinterest like pins.
-url: http://webjeda.com/
+title: Gaedere
+desctiption: aprendendo, desenvolvendo e compartilhado juntos 
+url: https://gaedere.com.br
 permalink: ':title/'
 
 markdown: kramdown
-baseurl: "/karna"
-full-version: "http://webjeda.com/karna-full/"
+baseurl: "/gaedere"
+full-version: "https://gaedere.com.br"
 
 sass:
-    style: compressed
-
+  style: compressed
   
 #optimization
 #compress.html
 compress_html:
-  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  clippings: [html, div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
   comments: ["<!-- ", " -->"]
   endings: [all]
   ignore:
@@ -26,12 +24,11 @@ compress_html:
 
 highlight: rouge
 
-
 # Tracker
-analytics: UA-83979019-1
+analytics:
 
 # Comments
-disqus-shortname: webjeda-demo
+disqus-shortname:
 
 # Contact form
 # Go to https://getsimpleform.com and get a API token by signing up with your email and enter that here
