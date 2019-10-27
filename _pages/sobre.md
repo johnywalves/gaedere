@@ -1,7 +1,7 @@
 ---
-title: About
+title: Sobre
 layout: post
-permalink: /about/
+permalink: /sobre/
 ---
 
 Karna is a Jekyll theme created with pinterest like pins. It is a freemium theme.

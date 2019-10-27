@@ -1,5 +1,5 @@
 title: Gaedere
-desctiption: aprendendo, desenvolvendo e compartilhado juntos 
+desctiption: Aprendendo, desenvolvendo e compartilhado juntos
 url: https://gaedere.com.br
 permalink: ':title/'
 
@@ -38,5 +38,5 @@ include: [_pages]
 version: 0.8
 
 plugins: 
-    - jekyll-paginate
-    - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-seo-tag

@@ -1,9 +1,8 @@
 ---
-title: Contact
+title: Contato
 layout: post
-permalink: /contact/
+permalink: /contato/
 ---
-
 
 <style>
 .contact-li {
