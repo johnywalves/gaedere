@@ -4,12 +4,12 @@ url: https://gaedere.com.br
 permalink: ':title/'
 
 markdown: kramdown
-baseurl: "/gaedere"
+baseurl: ""
 full-version: "https://gaedere.com.br"
 
 sass:
   style: compressed
-  
+
 #optimization
 #compress.html
 compress_html:

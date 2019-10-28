@@ -1,7 +1,7 @@
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 0px; /* 0 width - change this with JavaScript */
+    width: 35px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 2; /* Stay on top */
     opacity: 0.95;
@@ -33,7 +33,7 @@
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 3px;
     font-size: 36px;
     margin-left: 50px;
     cursor: pointer;
@@ -45,19 +45,14 @@
     padding: 20px;
 }
  */
+#main {
+    margin-left: 35px;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-}
-#slid {
-    color: #eee;
-    position: fixed;
-    top: 0px;
-    left: 0;
-    z-index: 1;
-    border: none;
-    cursor: pointer;
 }
 
 .fa-align-left {

@@ -5,30 +5,27 @@ layout: compress
 <html lang="en">
 {% include head.html %}
 
-<body>
+<body onload="toggleNav()">
   <header>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      {% include menu-links.html %}
-    </div>
-
-    <!-- Use any element to open the sidenav -->
-    <span id="slid" onclick="openNav()"><i class="fa fa-align-left" aria-hidden="true"></i></span>
     <a href="{{site.baseurl}}/">
       <h1 class="header-title">{{site.title}}<i class="fa fa-share-alt" aria-hidden="true"></i> </h1>
     </a>
     <h2 class="header-tagline">Aprendendo, desenvolvendo e compartilhado juntos</h2>
   </header>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+    {% include menu-links.html %}
+  </div>
+
   <div id="main">
     {{content}}
     {% include footer.html %}
   </div>
   <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-    }
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
+    function toggleNav() {
+      sideNav = document.getElementById("mySidenav").style;
+      sideNav.width = (sideNav.width == "35px" ? "250px" : "35px");
     }
   </script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet"
