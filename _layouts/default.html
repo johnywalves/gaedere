@@ -14,7 +14,12 @@ layout: compress
   </header>
 
   <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+
+    <input type="checkbox" id="menu">
+    <label for="menu" class="icon" onclick="toggleNav()">
+      <div class="menu"></div>
+    </label>
+
     {% include menu-links.html %}
   </div>
 

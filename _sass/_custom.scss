@@ -1,56 +1,83 @@
-// The rotating sun in the logo
-.fa.fa-sun-o {
-  color: #ea6111;
-  -webkit-animation-name: spin;
-  -webkit-animation-duration: 9000ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-name: spin;
-  -moz-animation-duration: 9000ms;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
-  -ms-animation-name: spin;
-  -ms-animation-duration: 9000ms;
-  -ms-animation-iteration-count: infinite;
-  -ms-animation-timing-function: linear;
+input#menu {
+  display: none;
+}
 
-  animation-name: spin;
-  animation-duration: 9000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  @-ms-keyframes spin {
-    from {
-      -ms-transform: rotate(0deg);
-    }
-    to {
-      -ms-transform: rotate(360deg);
-    }
-  }
-  @-moz-keyframes spin {
-    from {
-      -moz-transform: rotate(0deg);
-    }
-    to {
-      -moz-transform: rotate(360deg);
-    }
-  }
-  @-webkit-keyframes spin {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  &:hover {
-    color: #eae311;
-  }
+.icon {
+  cursor: pointer;
+  display: block;
+  height: 24px;
+  padding: 16px;
+  width: 24px;
+}
+
+label.icon {
+  position: fixed;
+  z-index: 200;
+  top: 25px;
+}
+
+.icon .menu,
+.icon .menu::before,
+.icon .menu::after {
+  background: #9fb1bd;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition: background ease 0.3s, top ease 0.3s 0.3s, transform ease 0.3s;
+  width: 20px;
+}
+
+.icon:hover .menu,
+.icon:hover .menu::before,
+.icon:hover .menu::after {
+  background: #ea6111;
+}
+
+.icon .menu {
+  left: 5px;
+  top: 5px;
+}
+
+.icon .menu::before {
+  top: -6px;
+}
+
+.icon .menu::after {
+  top: 6px;
+}
+
+#menu:checked + .icon .menu {
+  background: transparent;
+}
+
+#menu:checked + .icon .menu::before {
+  transform: rotate(45deg);
+}
+
+#menu:checked + .icon .menu::after {
+  transform: rotate(-45deg);
+}
+
+#menu:checked + .icon .menu::before,
+#menu:checked + .icon .menu::after {
+  top: 0;
+  transition: top ease 0.3s, transform ease 0.3s 0.3s;
+}
+
+nav {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  padding-top: 60px;
+  position: fixed;
+  transition: width ease 0.6s;
+  width: 60px;
+  z-index: 100;
+
+  overflow: hidden;
+}
+
+#menu:checked ~ nav {
+  width: 200px;
 }
